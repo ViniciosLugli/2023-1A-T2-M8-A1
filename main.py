@@ -56,6 +56,10 @@ def main():
     while True:
         text = input('>> ')
 
+        if text == 'sair':
+            print('Indo ali...')
+            break
+
         if intent := intent_recognizer.recognize(text):
             action = intent_handler.handle(intent)
             print(action)
